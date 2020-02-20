@@ -178,7 +178,18 @@ class RegisterView extends Component {
                       this.register();
                     }}
                   >
-                    {isSubmitting ? "Please wait..." : "Submit"}
+                    Register
+                  </button>
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-block"
+                    disabled={isSubmitting}
+                    onClick={e => {
+                      e.preventDefault();
+                      this.returnLogin();
+                    }}
+                  >
+                    Return to Login
                   </button>
                 </Form>
               )}

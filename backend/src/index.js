@@ -80,12 +80,12 @@ app.get("/statistics", (req, res) => {
 
 // insert a new user
 app.post("/newUser", (req, res) => {
-  const { fullname, password, email } = req.body;
+  const { fullname, email, password } = req.body;
+  console.log(req.body, "REQ BODY");
   const id = Math.round(Math.random() * 10000);
-  console.log("am here");
   pool.query(
     "insert into users values ($1, $2, $3, $4)",
-    [id, fullname, password, email],
+    [id, fullname, email, password],
     (error, results) => {
       if (error) {
         console.log(error);

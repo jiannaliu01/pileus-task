@@ -1,9 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
-import { Formik } from "formik";
-import * as Yup from "yup";
-import * as EmailValidator from "email-validator";
-import { withRouter } from "react-router-dom";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
 
 class LoginView extends Component {
@@ -12,7 +9,7 @@ class LoginView extends Component {
 
     this.state = {
       users: null,
-      username: "",
+      email: "",
       password: "",
       error: false
     };
@@ -20,33 +17,66 @@ class LoginView extends Component {
 
   async componentDidMount() {
     const users = (await axios.get("http://localhost:8081/")).data;
-    console.log(users, "USerS");
     this.setState({
       users
     });
   }
 
-  updateUsername(value) {
-    this.setState({
-      username: value
-    });
-  }
+  getEmailList = object => {
+    var emails = [];
+    if (object == null) {
+      return [];
+    }
+    for (var i = 0; i < object.length; i++) {
+      emails.push(object[i].email);
+    }
+    return emails;
+  };
 
-  updatePassword(value) {
-    this.setState({
-      password: value
-    });
-  }
+  validEmailPassword = object => {
+    if (object == null) {
+      return false;
+    }
+    for (var i = 0; i < object.length; i++) {
+      if (
+        object[i].email === this.state.email &&
+        object[i].password === this.state.password
+      ) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  validateEmail = value => {
+    var emailList = this.getEmailList(this.state.users);
+    let error;
+    if (!value) {
+      error = "Required";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+      error = "Invalid email address";
+    } else if (!emailList.includes(value)) {
+      error = "There is no account with this email!";
+    }
+    this.setState({ email: value });
+    return error;
+  };
+
+  validatePassword = value => {
+    let error;
+    if (!value) {
+      error = "Required";
+    } else if (value.length < 8) {
+      error = "Password needs to have more than 8 characters";
+    }
+    this.setState({ password: value });
+    return error;
+  };
 
   login() {
-    //this.props.submitAnswer(this.state.answer);
-    let objects = {
-      method: "POST",
-      url: "http://127.0.0.1:8081/newUser",
-      headers: null,
-      data: { username: this.state.username, password: this.state.password }
-    };
-    if (this.state.users.keys(this.state.username) == null) {
+    var validLogin = this.validEmailPassword(this.state.users);
+
+    if (!validLogin) {
       this.setState({ error: true });
     } else {
       this.props.history.replace("/statistics");
@@ -57,101 +87,87 @@ class LoginView extends Component {
     }
   }
 
-  register() {
+  returnRegister() {
     this.props.history.replace("/register");
   }
 
   render() {
-    var loginView = (
-      <form>
-        <input
-          type="username"
-          onChange={event => {
-            this.updateUsername(event.target.value);
-          }}
-          value={this.state.username}
-        />
-        <input
-          type="password"
-          onChange={event => {
-            this.updatePassword(event.target.value);
-          }}
-          value={this.state.password}
-        />
-        <button
-          type="button"
-          onClick={e => {
-            e.preventDefault();
-            this.login();
-          }}
-        >
-          Login
-        </button>
-      </form>
-    );
-    // var errorView = (
-    //   <form>
-    //     <Input
-    //       error
-    //       type="username"
-    //       onChange={event => {
-    //         this.updateUsername(event.target.value);
-    //       }}
-    //       value={this.state.username}
-    //     />
-    //     <Input
-    //       error
-    //       type="password"
-    //       onChange={event => {
-    //         this.updatePassword(event.target.value);
-    //       }}
-    //       value={this.state.password}
-    //     />
-    //     <Button
-    //       type="button"
-    //       onClick={e => {
-    //         e.preventDefault();
-    //         this.login();
-    //       }}
-    //     >
-    //       Login
-    //     </Button>
-    //   </form>
-    //  );
     return (
-      // <div className="container">
-      //   <div className="row">
-      //     {this.state.questions === null && <p>Loading questions...</p>}
-      //     {this.state.questions &&
-      //       this.state.questions.map(question => (
-      //         <div key={question.id} className="col-sm-12 col-md-4 col-lg-3">
-      //           <Link to={`/question/${question.id}`}>
-      //             <div className="card text-white bg-success mb-3">
-      //               <div className="card-header">
-      //                 Answers: {question.answers}
-      //               </div>
-      //               <div className="card-body">
-      //                 <h4 className="card-title">{question.title}</h4>
-      //                 <p className="card-text">{question.description}</p>
-      //               </div>
-      //             </div>
-      //           </Link>
-      //         </div>
-      //       ))}
-      //   </div>
-      // </div>
-      <React.Fragment>
-        {this.state.error ? null : loginView}
-        <button
-          type="button"
-          onClick={e => {
-            e.preventDefault();
-            this.register();
-          }}
-        >
-          Register
-        </button>
-      </React.Fragment>
+      <div className="container">
+        <div className="row mb-5">
+          <div className="col-lg-12 text-center">
+            <h1 className="mt-5">Login</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-lg-12">
+            <Formik initialValues={{ username: "", email: "", password: "" }}>
+              {({ touched, errors, isSubmitting }) => (
+                <Form>
+                  <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <Field
+                      type="email"
+                      name="email"
+                      placeholder="Enter email"
+                      className={`form-control ${
+                        touched.email && errors.email ? "is-invalid" : ""
+                      }`}
+                      validate={this.validateEmail}
+                    />
+                    <ErrorMessage
+                      component="div"
+                      name="email"
+                      className="invalid-feedback"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <Field
+                      type="password"
+                      name="password"
+                      placeholder="Enter password"
+                      className={`form-control ${
+                        touched.password && errors.password ? "is-invalid" : ""
+                      }`}
+                      validate={this.validatePassword}
+                    />
+                    <ErrorMessage
+                      component="div"
+                      name="password"
+                      className="invalid-feedback"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-block"
+                    disabled={isSubmitting}
+                    onClick={e => {
+                      e.preventDefault();
+                      this.login();
+                    }}
+                  >
+                    Login
+                  </button>
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-block"
+                    disabled={isSubmitting}
+                    onClick={e => {
+                      e.preventDefault();
+                      this.returnRegister();
+                    }}
+                  >
+                    Have Not Logged In? Register!
+                  </button>
+                </Form>
+              )}
+            </Formik>
+          </div>
+        </div>
+      </div>
     );
   }
 }
