@@ -118,7 +118,7 @@ class RegisterView extends Component {
                   <div className="form-group">
                     <label htmlFor="username">Full Name</label>
                     <Field
-                      type="username"
+                      type="tel"
                       name="username"
                       placeholder="Enter full name"
                       className={`form-control ${
@@ -136,7 +136,7 @@ class RegisterView extends Component {
                   <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <Field
-                      type="email"
+                      type="tel"
                       name="email"
                       placeholder="Enter email"
                       className={`form-control ${
@@ -154,7 +154,7 @@ class RegisterView extends Component {
                   <div className="form-group">
                     <label htmlFor="password">Password</label>
                     <Field
-                      type="password"
+                      type="tel"
                       name="password"
                       placeholder="Enter password"
                       className={`form-control ${

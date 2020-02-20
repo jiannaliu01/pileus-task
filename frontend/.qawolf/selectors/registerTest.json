@@ -1,0 +1,212 @@
+[
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"username\" type=\"username\" placeholder=\"Enter full name\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 0
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"username\" type=\"username\" placeholder=\"Enter full name\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 1
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"username\" type=\"username\" placeholder=\"Enter full name\" class=\"form-control \" value=\"jerry\"/>"
+  },
+  "index": 2
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"\"/>"
+  },
+  "index": 3
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"password\" placeholder=\"Enter password\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 4
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"password\" placeholder=\"Enter password\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 5
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<form action=\"#\"></form>",
+    "<div class=\"col-lg-12\"></div>"
+   ],
+   "node": "<div class=\"form-group\" innertext=\"Email Invalid email address\"><label for=\"email\">Email</label><input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"woiue\"/><div class=\"invalid-feedback\">Invalid email address</div></div>"
+  },
+  "index": 6
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"woiue\"/>"
+  },
+  "index": 7
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"woiue\"/>"
+  },
+  "index": 8
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"woiue\"/>"
+  },
+  "index": 9
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"woiue\"/>"
+  },
+  "index": 10
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"col-lg-12\"></div>",
+    "<div class=\"row\"></div>"
+   ],
+   "node": "<form action=\"#\" innertext=\"Full Name Email Email already in use Password Password needs to have more than 8 characters Register Return to Login\"><div class=\"form-group\"><label for=\"username\">Full Name</label><input name=\"username\" type=\"username\" placeholder=\"Enter full name\" class=\"form-control \" value=\"jerry\"/><div class=\"invalid-feedback\">Email already in use</div></div><div class=\"form-group\"><label for=\"email\">Email</label><input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"righway@cm.com\"/><div class=\"invalid-feedback\">Email already in use</div></div><div class=\"form-group\"><label for=\"password\">Password</label><input name=\"password\" type=\"password\" placeholder=\"Enter password\" class=\"form-control is-invalid\" value=\"wiouer\"/><div class=\"invalid-feedback\">Password needs to have more than 8 characters</div></div><button type=\"submit\" class=\"btn btn-primary btn-block\">Register</button><button type=\"submit\" class=\"btn btn-primary btn-block\">Return to Login</button></form>"
+  },
+  "index": 11
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"password\" placeholder=\"Enter password\" class=\"form-control is-invalid\" value=\"wiouer\"/>"
+  },
+  "index": 12
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"password\" placeholder=\"Enter password\" class=\"form-control is-invalid\" value=\"wiouer\"/>"
+  },
+  "index": 13
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"password\" placeholder=\"Enter password\" class=\"form-control is-invalid\" value=\"wiouer\"/>"
+  },
+  "index": 14
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"password\" placeholder=\"Enter password\" class=\"form-control is-invalid\" value=\"wiouer\"/>"
+  },
+  "index": 15
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"righway@cm.com\"/>"
+  },
+  "index": 16
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"righway@cm.com\"/>"
+  },
+  "index": 17
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"righway@cm.com\"/>"
+  },
+  "index": 18
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"email\" placeholder=\"Enter email\" class=\"form-control is-invalid\" value=\"righway@cm.com\"/>"
+  },
+  "index": 19
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<form action=\"#\"></form>",
+    "<div class=\"col-lg-12\"></div>"
+   ],
+   "node": "<button type=\"submit\" class=\"btn btn-primary btn-block\" innertext=\"Register\">Register</button>"
+  },
+  "index": 20
+ }
+]

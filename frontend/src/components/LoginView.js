@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
 
@@ -107,7 +106,8 @@ class LoginView extends Component {
                   <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <Field
-                      type="email"
+                      id="email"
+                      type="tel"
                       name="email"
                       placeholder="Enter email"
                       className={`form-control ${
@@ -117,7 +117,7 @@ class LoginView extends Component {
                     />
                     <ErrorMessage
                       component="div"
-                      name="email"
+                      name="emailError"
                       className="invalid-feedback"
                     />
                   </div>
@@ -125,7 +125,7 @@ class LoginView extends Component {
                   <div className="form-group">
                     <label htmlFor="password">Password</label>
                     <Field
-                      type="password"
+                      type="tel"
                       name="password"
                       placeholder="Enter password"
                       className={`form-control ${

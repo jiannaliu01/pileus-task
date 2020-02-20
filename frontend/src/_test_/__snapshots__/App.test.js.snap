@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <nav
+      class="navbar navbar-dark bg-primary fixed-top"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        Pileus Assignment
+      </a>
+    </nav>
+    <div
+      class="container"
+    >
+      <div
+        class="row mb-5"
+      >
+        <div
+          class="col-lg-12 text-center"
+        >
+          <h1
+            class="mt-5"
+          >
+            Login
+          </h1>
+        </div>
+      </div>
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-12"
+        >
+          <form
+            action="#"
+          >
+            <div
+              class="form-group"
+            >
+              <label
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                class="form-control "
+                name="email"
+                placeholder="Enter email"
+                type="email"
+                value=""
+              />
+            </div>
+            <div
+              class="form-group"
+            >
+              <label
+                for="password"
+              >
+                Password
+              </label>
+              <input
+                class="form-control "
+                name="password"
+                placeholder="Enter password"
+                type="password"
+                value=""
+              />
+            </div>
+            <button
+              class="btn btn-primary btn-block"
+              type="submit"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-primary btn-block"
+              type="submit"
+            >
+              Have Not Logged In? Register!
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
