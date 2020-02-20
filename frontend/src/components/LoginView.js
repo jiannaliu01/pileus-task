@@ -5,7 +5,6 @@ import * as Yup from "yup";
 import * as EmailValidator from "email-validator";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import { Input, Button } from "@material-ui/core";
 
 class LoginView extends Component {
   constructor(props) {
@@ -90,35 +89,35 @@ class LoginView extends Component {
         </button>
       </form>
     );
-    var errorView = (
-      <form>
-        <Input
-          error
-          type="username"
-          onChange={event => {
-            this.updateUsername(event.target.value);
-          }}
-          value={this.state.username}
-        />
-        <Input
-          error
-          type="password"
-          onChange={event => {
-            this.updatePassword(event.target.value);
-          }}
-          value={this.state.password}
-        />
-        <Button
-          type="button"
-          onClick={e => {
-            e.preventDefault();
-            this.login();
-          }}
-        >
-          Login
-        </Button>
-      </form>
-    );
+    // var errorView = (
+    //   <form>
+    //     <Input
+    //       error
+    //       type="username"
+    //       onChange={event => {
+    //         this.updateUsername(event.target.value);
+    //       }}
+    //       value={this.state.username}
+    //     />
+    //     <Input
+    //       error
+    //       type="password"
+    //       onChange={event => {
+    //         this.updatePassword(event.target.value);
+    //       }}
+    //       value={this.state.password}
+    //     />
+    //     <Button
+    //       type="button"
+    //       onClick={e => {
+    //         e.preventDefault();
+    //         this.login();
+    //       }}
+    //     >
+    //       Login
+    //     </Button>
+    //   </form>
+    //  );
     return (
       // <div className="container">
       //   <div className="row">
@@ -142,7 +141,7 @@ class LoginView extends Component {
       //   </div>
       // </div>
       <React.Fragment>
-        {this.state.error ? errorView : loginView}
+        {this.state.error ? null : loginView}
         <button
           type="button"
           onClick={e => {
