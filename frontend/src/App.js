@@ -28,8 +28,13 @@ class App extends Component {
             <LoginView {...props} isLoggedIn={this.setIsLoggedIn} />
           )}
         />
-
-        <Route exact path="/register" component={RegisterView} />
+        <Route
+          path="/register"
+          exact
+          render={props => (
+            <RegisterView {...props} isLoggedIn={this.setIsLoggedIn} />
+          )}
+        />
         <Route
           path="/statistics"
           exact
