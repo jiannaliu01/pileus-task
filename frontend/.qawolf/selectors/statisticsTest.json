@@ -1,0 +1,142 @@
+[
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" id=\"email\" type=\"tel\" placeholder=\"Enter email\" class=\"form-control \" value=\"\" labels=\"Email\"/>"
+  },
+  "index": 0
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" id=\"email\" type=\"tel\" placeholder=\"Enter email\" class=\"form-control \" value=\"\" labels=\"Email\"/>"
+  },
+  "index": 1
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"tel\" placeholder=\"Enter password\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 2
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"tel\" placeholder=\"Enter password\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 3
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<form action=\"#\"></form>",
+    "<div class=\"col-lg-12\"></div>"
+   ],
+   "node": "<button type=\"submit\" class=\"btn btn-primary btn-block\" innertext=\"Login\">Login</button>"
+  },
+  "index": 4
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<nav class=\"navbar navbar-dark bg-primary fixed-top\"></nav>",
+    "<div></div>"
+   ],
+   "node": "<a class=\"navbar-brand\" href=\"/\" innertext=\"Pileus Assignment\">Pileus Assignment</a>"
+  },
+  "index": 5
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<form action=\"#\"></form>",
+    "<div class=\"col-lg-12\"></div>"
+   ],
+   "node": "<button type=\"submit\" class=\"btn btn-primary btn-block\" innertext=\"Have Not Logged In? Register!\">Have Not Logged In? Register!</button>"
+  },
+  "index": 6
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"username\" type=\"tel\" placeholder=\"Enter full name\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 7
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"username\" type=\"tel\" placeholder=\"Enter full name\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 8
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"username\" type=\"tel\" placeholder=\"Enter full name\" class=\"form-control \" value=\"Jerry Liu\"/>"
+  },
+  "index": 9
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"tel\" placeholder=\"Enter email\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 10
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"email\" type=\"tel\" placeholder=\"Enter email\" class=\"form-control \" value=\"jerryliu@gmail.com\"/>"
+  },
+  "index": 11
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<div class=\"form-group\"></div>",
+    "<form action=\"#\"></form>"
+   ],
+   "node": "<input name=\"password\" type=\"tel\" placeholder=\"Enter password\" class=\"form-control \" value=\"\"/>"
+  },
+  "index": 12
+ },
+ {
+  "html": {
+   "ancestors": [
+    "<form action=\"#\"></form>",
+    "<div class=\"col-lg-12\"></div>"
+   ],
+   "node": "<button type=\"submit\" class=\"btn btn-primary btn-block\" innertext=\"Register\">Register</button>"
+  },
+  "index": 13
+ }
+]

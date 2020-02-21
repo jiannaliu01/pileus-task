@@ -78,6 +78,7 @@ class LoginView extends Component {
     if (!validLogin) {
       this.setState({ error: true });
     } else {
+      this.props.isLoggedIn();
       this.props.history.replace("/statistics");
       this.setState({
         username: "",

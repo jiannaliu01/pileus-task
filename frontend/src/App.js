@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "./components/NavBar";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import LoginView from "./components/LoginView";
 import RegisterView from "./components/RegisterView";
 import Statistics from "./components/Statistics";
@@ -9,16 +9,34 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirect: null
+      loggedIn: false
     };
   }
+
+  setIsLoggedIn = () => {
+    this.setState({ isLoggedIn: true });
+  };
+
   render() {
     return (
       <div>
         <NavBar />
-        <Route exact path="/" component={LoginView} />
+        <Route
+          path="/"
+          exact
+          render={props => (
+            <LoginView {...props} isLoggedIn={this.setIsLoggedIn} />
+          )}
+        />
+
         <Route exact path="/register" component={RegisterView} />
-        <Route exact path="/statistics" component={Statistics} />
+        <Route
+          path="/statistics"
+          exact
+          render={props => (
+            <Statistics {...props} isLoggedIn={this.state.isLoggedIn} />
+          )}
+        />
       </div>
     );
   }
